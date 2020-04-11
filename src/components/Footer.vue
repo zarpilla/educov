@@ -1,5 +1,14 @@
 <template>
   <footer class="footer">
+    <cookie-law theme="blood-orange" 
+      buttonText="D'acord" 
+      message="Aquest portal utilitza cookies per donar una bona experiència durant la visita."
+      buttonLinkText="Més informació"
+      buttonLink="/privacitat"
+      position="bottom" 
+      transitionName="fade"
+      >
+    </cookie-law>
     <div class="educov has-text-centered">      
       EDU<b>COV</b>
     </div>
@@ -23,11 +32,14 @@
 <script>
 const fb = require("../firebaseConfig.js");
 import { mapState } from "vuex";
+import CookieLaw from 'vue-cookie-law'
+
 
 export default {
   computed: {
     ...mapState(["currentUser", "userProfile"])
   },
+  components: { CookieLaw },
   mounted() {
   }
 };
