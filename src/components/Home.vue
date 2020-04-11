@@ -26,11 +26,15 @@
       </div>
 
       <div class="container main-container">
+
+        <h3 class="title all-boxes-create">Vols crear un repte?</h3>
+        <router-link to="/login" class="button has-margin-bottom-3 is-info">Registra't!</router-link>
+
         <section class="zsection">
           <AllBoxes></AllBoxes>
         </section>
 
-        <h3 class="title all-boxes" style="padding-top:40px">Vols crear un repte?</h3>
+        <h3 class="title all-boxes-create">Vols crear un repte?</h3>
         <router-link to="/login" class="button has-margin-bottom-3 is-info">Registra't!</router-link>
       </div>
 
@@ -50,15 +54,20 @@ export default {
   components: {
     AllBoxes
   },
-  mounted() {
+  created() {
     this.slideText()
   },
   data() {
     return{
       text1: ["Autoaprenentatge", "Obert", "Dinàmic", "En directe"],
       text2: ["Els recursos permeten un aprenentatge de forma autònoma", "Tothom hi té accés. És una eina lliure i gratuïta", "Permet la creació de nous continguts i reptes adaptats a les necessitats de cada moment.", "Es poden crear reptes en directe per treballar conjuntament a través de videoconferències"],
-      counter: 0
+      counter: 0,
+      interval: 0,
+      polling: null
     }
+  },
+  beforeDestroy () {
+    clearInterval(this.polling)
   },
   methods: {    
     bgImage(scope) {
@@ -66,8 +75,10 @@ export default {
       return require(`@/assets/images/${image}`)
     },
     slideText() {
-      this.counter = 0;
-      setInterval(this.change, 4000)
+      this.counter = 1
+      this.polling = setInterval(() => {
+        this.change()
+      }, 4000)
     },
     change() {
       let elem1 = document.getElementById('educov-title')
@@ -151,6 +162,8 @@ export default {
 .hero0{
   height: 650px;
   position: relative;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 .hero0 .container{
   width: 100%;
@@ -183,5 +196,8 @@ export default {
 }
 .title b{
   font-weight: normal;
+}
+.all-boxes-create{
+  padding-top: 4rem;
 }
 </style>
