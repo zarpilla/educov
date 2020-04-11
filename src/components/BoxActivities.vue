@@ -230,10 +230,7 @@ export default {
         r.ok = false
         r.shuffled = JSON.parse(JSON.stringify(r.answers))
         r.shuffled = this.shuffle(r.shuffled)
-      });
-
-      //this.$set(this.results, 'milestones', [{ num: 1, name: '', type: 'answer', evaluation: 'student', answerType: 'open', answers: ['']}])
-
+      })
     },
     shuffle(a) {
       for (let i = a.length - 1; i > 0; i--) {

@@ -81,9 +81,15 @@
             {{ box.downloads }} intents
             <span class="material-icons">new_releases</span>
           </li>
-          <li class="has-text-right">
+          <li class="has-text-right" v-if="!currentUser || box.successIntents == 0">
             {{ box.successIntents }} intents superats
             <span class="material-icons">check_circle</span>
+          </li>
+          <li class="has-text-right" v-if="currentUser && box.successIntents > 0">
+            <router-link :to="`/results/${boxId}`">
+              {{ box.successIntents }} intents superats
+              <span class="material-icons">check_circle</span>
+            </router-link>            
           </li>
           <li class="has-text-right">
             {{ box.comments }} comentaris
@@ -95,12 +101,7 @@
             
             <button @click="start()" class="button has-margin-top-2 is-full" v-if="box.milestones.length > 0">
               Començar repte!
-            </button>
-            
-            <p
-              v-if="currentUser && userProfile.balance <= 0 && this.box.userId != this.currentUser.uid && !canAccess"
-              class="has-text-danger"
-            >No tens punts per descarregar caixes</p>
+            </button>            
           </li>
           <li v-if="currentUser && box.userId == currentUser.uid" class="text-center admin-buttons">
             <button class="button" @click="editBox" v-if="currentUser && box.userId == currentUser.uid">Edita</button>

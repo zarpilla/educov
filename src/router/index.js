@@ -13,6 +13,7 @@ import BoxActivities from '@/components/BoxActivities'
 import BoxEdit from '@/components/BoxEdit'
 import MyBoxes from '@/components/MyBoxes'
 import MyIntents from '@/components/MyIntents'
+import BoxIntents from '@/components/BoxIntents'
 import User from '@/components/User'
 
 
@@ -99,6 +100,15 @@ const router = new Router({
             meta: {
 				requiresAuth: false,
 				title: 'Activitat - EDUCOV',
+            }
+		},
+        {
+			path: '/results/:id',
+			name: 'BoxIntents',
+			component: BoxIntents,
+            meta: {
+				requiresAuth: true,
+				title: 'Intents - EDUCOV',
             }
 		},
         {
