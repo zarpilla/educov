@@ -8,7 +8,7 @@ Alguns reptes tenen emissions en directe a hores concretes per part de qui els p
 
 
 ## Atribucions
-Aquest projecte és de codi obert i ha estat desenvolupat grácies a altres projectes de codi obert:
+Aquest projecte és de codi obert i ha estat desenvolupat gràcies a altres projectes de codi obert:
 
 - [npm](https://www.npmjs.com/)
 - [nodejs](https://nodejs.org/)
@@ -50,10 +50,10 @@ npm install
 npm run dev
 ```
 
-### Roadmap
-- Optimitzar algunes queries de base de dades
-- Implementar Vue SSR 
-- Editor markup per a l'edició dels reptes
+### Tech Roadmap
+- Optimitzar algunes queries
+- Implementar Vue SSR via Nuxt
+- Editor markup per als continguts
 
 
 ### License

@@ -12,12 +12,11 @@ La plataforma està pensada per al professorat i l’alumnat dels diferents curs
 
 Dins de cada àrea, l’alumnat hi pot trobar diferents continguts i reptes que l’ajudaran, de forma autònoma, a millorar els seus coneixements i aptituds en la matèria.
 
-
-<div class="text-center">
-  <iframe class="has-margin-bottom-3" src="//player.vimeo.com/video/406459140" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+<div class="text-center video-container">  
+  <iframe class="has-margin-bottom-3" width="560" height="315" src="https://www.youtube.com/embed/awAkrCmyVik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<h2 class="title">Com funciona?</h2>
+<h2 class="title has-margin-top-3">Com funciona?</h2>
 
 <br>
 <h4 class="subtitle">Qui genera els continguts i els reptes?</h4>
@@ -31,6 +30,8 @@ La plataforma permet crear continguts associats a les diferents àrees de coneix
 Els continguts es poden presentar en diferents formats: documents escrits o documents audiovisuals (àudios o vídeos).
 
 Respecte a les activitats o reptes, cada contingut pot anar acompanyat d’activitats o reptes que ajudin a interioritzar-lo. Aquestes són opcionals i la plataforma permet inserir-los en format test (pregunta i resposta concreta) o en format de pregunta i resposta oberta.
+
+Algunes activitats poden tenir informació (data, hora i enllaç) de videoconferències per a fer trobades en directe.
 
 
 <h4 class="subtitle">Com es valoren els continguts i els reptes?</h4>
@@ -47,7 +48,7 @@ Si vols consultar un contingut i repte o realitzar-lo, tens la opció de registr
 
 
 <h3 class="title">Codi obert</h3>
-Aquest <a target="_blank" href="https://github.com/zarpilla/educov">projecte és de codi obert</a> i ha estat desenvolupat grácies a altres projectes de codi obert:
+Aquest <a target="_blank" href="https://github.com/zarpilla/educov">projecte és de codi obert</a> i ha estat desenvolupat gràcies a altres projectes de codi obert:
 
 <a target="_blank" href="https://www.npmjs.com">npm</a><br>
 <a target="_blank" href="https://nodejs.org">nodejs</a><br>
@@ -74,4 +75,33 @@ export default {
   
 };
 </script>
+<style scoped>
+.video-container{
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; 
+  height: 0; 
+  overflow: hidden;
+  text-align: center;
+}
+.video-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .video-container{    
+    padding-bottom:380px;
+  }
+  .video-container iframe{
+    width: 560px;
+    height: 315px;
+    position: relative;
+  }
+}   
+h4.subtitle{
+  margin-bottom: 10px;
+}
 </style>
