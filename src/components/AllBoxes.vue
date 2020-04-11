@@ -143,7 +143,7 @@ export default {
       return this.sortByKey(this.filteredScopes.filter(s => s.level == 'primaria'), 'description')
     },
     sortedSecundaria() {
-      return this.sortByKey(this.filteredScopes.filter(s => s.level == 'primaria'), 'description')
+      return this.sortByKey(this.filteredScopes.filter(s => s.level != 'primaria'), 'description')
     }
     
   },
@@ -167,6 +167,7 @@ export default {
     },
     setScopeCategory(expanded) {
       this.scope = ''
+      this.direct = null
     },
     bgImage(scope) {            
       let image = scopes.find(s => s.id == scope) ? scopes.find(s => s.id == scope).image : 'ALT'

@@ -78,7 +78,7 @@
             <i class="material-icons">build</i>
           </li>          
           <li class="has-text-right">
-            {{ box.downloads }} intents
+            {{ box.intents ? box.intents : 0 }} intents
             <span class="material-icons">new_releases</span>
           </li>
           <li class="has-text-right" v-if="!currentUser || box.successIntents == 0">
@@ -99,7 +99,7 @@
         <ul class="info info-buttons">
           <li class="text-center">
             
-            <button @click="start()" class="button has-margin-top-2 is-full" v-if="box.milestones.length > 0">
+            <button @click="start()" class="button has-margin-top-2 is-full" v-if="box.milestones && box.milestones.length > 0">
               Començar repte!
             </button>            
           </li>
@@ -167,7 +167,7 @@
             <h4 v-if="box.duration && box.duration != ''" class="subtitle">Durada</h4>
             <p v-if="box.duration && box.duration != ''" class="desc">{{ box.duration }}</p>
 
-            <button @click="start()" class="button has-margin-top-2" v-if="box.milestones.length > 0">
+            <button @click="start()" class="button has-margin-top-2" v-if="box.milestones && box.milestones.length > 0">
               Començar repte!
             </button>
             

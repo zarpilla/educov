@@ -332,7 +332,7 @@ export default {
 
             this.reloadIntent()            
 
-            let intents = this.boxes.find(b => b.id == this.boxId).intents
+            let intents = this.boxes.find(b => b.id == this.boxId).intents || 0
             intents++
             let successIntents = this.boxes.find(b => b.id == this.boxId).successIntents || 0
 
@@ -353,8 +353,6 @@ export default {
                   })
               }
             }
-
-            
 
             fb.boxesCollection.doc(this.boxId).update({
               intents: intents,

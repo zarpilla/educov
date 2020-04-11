@@ -26,16 +26,15 @@
       </div>
 
       <div class="container main-container">
-
-        <h3 class="title all-boxes-create">Vols crear un repte?</h3>
-        <router-link to="/login" class="button has-margin-bottom-3 is-info">Registra't!</router-link>
+        <h3 v-if="!currentUser" class="title all-boxes-create">Vols crear un repte?</h3>
+        <router-link v-if="!currentUser" to="/login" class="button has-margin-bottom-3 is-info">Registra't!</router-link>
 
         <section class="zsection">
           <AllBoxes></AllBoxes>
         </section>
 
-        <h3 class="title all-boxes-create">Vols crear un repte?</h3>
-        <router-link to="/login" class="button has-margin-bottom-3 is-info">Registra't!</router-link>
+        <h3 v-if="!currentUser" class="title all-boxes-create">Vols crear un repte?</h3>
+        <router-link v-if="!currentUser" to="/login" class="button has-margin-bottom-3 is-info">Registra't!</router-link>
       </div>
 
       
@@ -56,6 +55,9 @@ export default {
   },
   created() {
     this.slideText()
+  },
+  computed: {
+    ...mapState(["userProfile", "currentUser"])
   },
   data() {
     return{
