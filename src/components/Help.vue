@@ -13,6 +13,9 @@ La plataforma està pensada per al professorat i l’alumnat dels diferents curs
 Dins de cada àrea, l’alumnat hi pot trobar diferents continguts i reptes que l’ajudaran, de forma autònoma, a millorar els seus coneixements i aptituds en la matèria.
 
 
+<div class="text-center">
+  <iframe class="has-margin-bottom-3" src="//player.vimeo.com/video/406459140" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+</div>
 
 <h2 class="title">Com funciona?</h2>
 
