@@ -15,3 +15,4 @@ yarn-error.log*
 
 # fb secret
 /src/firebaseSecret.js
+/.firebase/*
