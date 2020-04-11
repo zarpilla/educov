@@ -104,7 +104,7 @@ const scopes = [
     id: 'SEC.EXT',
     description: "Llengua Estrangera",
     level: 'secundaria',
-    image: 'LIN.png'
+    image: 'LIN.jpg'
   },
   {
     id: 'SEC.MAT',
@@ -140,7 +140,7 @@ const scopes = [
     id: 'SEC.LLA',
     description: "Llatí",
     level: 'secundaria',
-    image: 'LIN.png'
+    image: 'LIN.jpg'
   },
   {
     id: 'SEC.ECO',
