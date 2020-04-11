@@ -55,7 +55,7 @@
             </span>
           </li>          
           <li class="has-text-right">
-            {{ box.createdOn ? box.createdOn.seconds : '' | formatDate }}
+            Creat {{ box.createdOn ? box.createdOn : '' | formatDateComment }}
             <i
               class="material-icons"
             >schedule</i>
@@ -77,11 +77,11 @@
             {{ box.milestones.length }} activitats
             <i class="material-icons">build</i>
           </li>          
-          <li class="has-text-right">
+          <li class="has-text-right" v-if="box.milestones && box.milestones.length > 0">
             {{ box.intents ? box.intents : 0 }} intents
             <span class="material-icons">new_releases</span>
           </li>
-          <li class="has-text-right" v-if="!currentUser || box.successIntents == 0">
+          <li class="has-text-right" v-if="box.milestones && box.milestones.length > 0 && (!currentUser || box.successIntents == 0)">
             {{ box.successIntents }} intents superats
             <span class="material-icons">check_circle</span>
           </li>
@@ -313,8 +313,11 @@
               <span v-if="box.okAnswers > 0 && box.okAnswers != box.milestones.length">
               Cal resoldre correctament {{ box.okAnswers }} activitats per superar el repte. 
               </span>
-              <span v-if="!box.okAnswers || box.okAnswers == box.milestones.length">
+              <span v-if="box.okAnswers > 0 && box.okAnswers == box.milestones.length">
               Cal resoldre correctament totes les activitats per superar el repte. 
+              </span>
+              <span v-if="box.okAnswers == 0 && box.milestones && box.milestones.length > 0">
+              No cal resoldre cap activitat per superar el repte. 
               </span>
             </p>
 
