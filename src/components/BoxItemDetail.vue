@@ -14,7 +14,12 @@
                 <div class="column zis-hidden-mobile " v-if="box.state == 'deleted' || box.state == 'draft'">
                 </div>
                 <div class="column zis-hidden-mobile" v-if="box.liveDate && box.liveDate != ''">
-                  <span class="button is-pulled-left is-danger button-detalls">EN DIRECTE!</span>
+                  <span class="button is-pulled-left is-danger button-detalls">
+                    <span class="material-icons">
+                    videocam
+                    </span>
+                    {{ box.liveDate }}                    
+                  </span>
                 </div>
                 <div class="column zis-hidden-mobile">
                   <span class="button is-pulled-right is-primary button-detalls">VEURE DETALLS</span>
@@ -43,9 +48,13 @@
               <i class="material-icons">build</i>
               {{ box.milestones && box.milestones.length > 0 ? box.milestones.length : '-' }}
             </div>
-            <div class="column column-download" :title="(box.successIntents || 0) + ' intents'">
+            <div class="column column-download" v-if="box.milestones && box.milestones.length > 0" :title="(box.successIntents || 0) + ' intents'">
               <i class="material-icons">check_circle</i>
               {{ box.successIntents || 0 }} / {{ box.intents ? box.intents : 0 }}
+            </div>
+            <div class="column column-download" v-if="box.milestones && box.milestones.length == 0" :title="'No hi ha intents'">
+              <i class="material-icons">check_circle</i>
+              -
             </div>
             <div class="column column-download" :title="box.reviews + ' valoracions'">
               <i class="material-icons">grade</i>

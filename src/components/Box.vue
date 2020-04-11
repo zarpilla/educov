@@ -38,9 +38,9 @@
             <span v-if="box.reviews != 1">valoracions</span>
           </div>
         </div>
-        <div class="button text-center is-full has-margin-bottom-1" @click="selectedMenu = 6" v-if="box.liveDate && box.liveDate != ''">
+        <!-- <div class="button text-center is-full has-margin-bottom-1" @click="selectedMenu = 6" v-if="box.liveDate && box.liveDate != ''">
           EN DIRECTE!
-        </div>
+        </div> -->
         <ul class="info">
           <li class="has-text-right" v-if="currentUser">
             <span class="text">
@@ -95,6 +95,15 @@
             {{ box.comments }} comentaris
             <i class="material-icons">chat</i>
           </li>
+          <li class="has-text-right" v-if="box.liveDate != ''">
+            <a class="has-text-danger" @click="selectedMenu = 6">
+              En directe {{ liveDateTime }}
+            </a>
+            <i class="material-icons">videocam</i>            
+          </li>
+
+          
+
         </ul>
         <ul class="info info-buttons">
           <li class="text-center">
@@ -129,7 +138,7 @@
             class="level-item has-text-centered"
             v-bind:class="{ 'selected-menu': selectedMenu == 6 }"
             @click="selectMenu(6)"
-          >En Directe!</div>
+          >En Directe</div>
           <div
             class="level-item has-text-centered"
             v-bind:class="{ 'selected-menu': selectedMenu == 5 }"
@@ -176,13 +185,13 @@
 
           <div v-if="selectedMenu == 6">
             <h4 class="subtitle">
-                En directe
+              En directe
             </h4>
             <p v-if="box.liveDate != ''" class="desc">Aquest repte te contingut en directe</p>
             <p v-if="box.liveDate != ''" class="desc"><b>Dia:</b> {{ box.liveDate }}</p>
             <p v-if="box.liveHour != ''" class="desc"><b>Hora:</b> {{ box.liveHour }}</p>
             <p class="desc" v-if="liveDateTime != ''">
-              <b>Concretament quan?</b> {{ liveDateTime }}
+              <b>Quan?</b> {{ liveDateTime }}
             </p>
 
             <a class="button has-margin-top-2" target="_blank" :href="box.liveLink" :disabled="box.liveLink == ''">ENLLAÇ AL DIRECTE</a>
