@@ -111,7 +111,7 @@ export default {
                   }
                   else {
                     let userName = this.users.find(u => u.id == userId).name
-                    this.$set(intent, 'userName', userInfo.name)
+                    this.$set(intent, 'userName', userName)
                   }
                 }
                 
