@@ -96,7 +96,7 @@
         </div>
       </div>
 
-      <div class="do-public bb" v-if="intent.userId == currentUser.uid">        
+      <div class="do-public bb" v-if="currentUser && intent.userId == currentUser.uid">        
         <label class="label" v-if="box.level != ''">Vols fer públic el resultat?</label>
         <div class="columns has-margin-bottom-2">
           <div class="column is-one-quarter">
@@ -346,11 +346,14 @@ export default {
               if (!thisBoxAlreadyDone) {
                 successIntents++
 
-                fb.usersCollection
+                if (this.currentUser) {
+                  fb.usersCollection
                   .doc(this.currentUser.uid)
                   .update({
                     xp: this.userProfile.xp + 1
                   })
+                }
+                
               }
             }
 

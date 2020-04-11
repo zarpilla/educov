@@ -39,13 +39,13 @@
 
         <div class="info-row info-row-last">
           <div class="columns is-marginless more-info is-mobile">            
-            <div class="column column-download" :title="box.downloads + ' intents'">              
-              <i class="material-icons">new_releases</i>
-              {{ box.downloads }}
+            <div class="column column-download" :title="( box.milestones && box.milestones.length > 0 ? box.milestones.length : 'sense' ) + ' activitats'">              
+              <i class="material-icons">build</i>
+              {{ box.milestones && box.milestones.length > 0 ? box.milestones.length : '-' }}
             </div>
-            <div class="column column-download" :title="(box.successIntents || 0) + ' intents superats'">
+            <div class="column column-download" :title="(box.successIntents || 0) + ' intents'">
               <i class="material-icons">check_circle</i>
-              {{ box.successIntents || 0 }} 
+              {{ box.successIntents || 0 }} / {{ box.intents ? box.intents : 0 }}
             </div>
             <div class="column column-download" :title="box.reviews + ' valoracions'">
               <i class="material-icons">grade</i>
