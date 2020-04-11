@@ -9,8 +9,8 @@
       transitionName="fade"
       >
     </cookie-law>
-    <div class="educov has-text-centered">      
-      EDU<b>COV</b>
+    <div class="educov has-text-centered">
+      <img id="educov-footer" src="@/assets/images/educov-white-logo.png" />      
     </div>
     <div class="developed has-text-centered">
       Projecte desenvolupat per <a href="https://webcoop.cat" target="_blank">webcoop</a> durant la <a href="https://hackovid.cat" target="_blank">hackató hackovid</a> per aportar solucions a les necessitats de la ciutadania durant el confinament
@@ -100,4 +100,8 @@ margin-bottom: 2rem;
 .educov b{
   font-weight: normal;
 }
+#educov-footer{
+  max-width: 120px;
+}
+
 </style>

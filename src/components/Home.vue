@@ -7,7 +7,7 @@
         <div class="container has-margin-top-3">
           <div class="columns">
             <div class="column is-9">
-              <div class="title" id="educov">EDU<b>COV</b></div>
+              <img id="educov" src="@/assets/images/educov-logo.png" />
               <div class="more">
                 <div class="subtitle" id="educov-title">Autoaprenentatge</div>
                 <p class="desc" id="educov-subtitle">
@@ -191,7 +191,7 @@ export default {
   font-weight: bold;  
 }
 .more{
-  margin-top:160px;
+  margin-top:70px;
   color:#49ADC1;
   width: 50%;
   font-size: 18px;
@@ -202,4 +202,13 @@ export default {
 .all-boxes-create{
   padding-top: 4rem;
 }
+#educov{
+  max-width: 200px;
+  margin-top: 120px;
+}
+@media screen and (min-width: 1024px) {
+  .more{
+    margin-top:140px;
+  }
+}   
 </style>
