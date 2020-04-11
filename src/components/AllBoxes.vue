@@ -9,13 +9,13 @@
       <div class="column is-half">
 
         <h3 class="subtitle sub-subtitle is-spaced" >Per àmbits</h3>
-        <button @click="setScope(''); expanded1 = false; expanded2 = false" class="button scope-list" v-bind:class="{ 'is-warning': scope != '' || expanded1 || expanded2, 'is-primary': scope == '' &&  !expanded1 && !expanded2 }">TOTS</button>
+        <button @click="setScope(''); level = ''; expanded1 = false; expanded2 = false" class="button scope-list" v-bind:class="{ 'is-warning': scope != '' || expanded1 || expanded2, 'is-primary': scope == '' &&  !expanded1 && !expanded2 }">TOTS</button>
 
-          <button @click="setScopeCategory(1); expanded1 = !expanded1; expanded2 = false" class="button scope-list" v-bind:class="{ 'is-warning': !expanded1, 'is-primary': expanded1 }">
+          <button @click="setScopeCategory('primaria'); expanded1 = !expanded1; expanded2 = false" class="button scope-list" v-bind:class="{ 'is-warning': !expanded1, 'is-primary': expanded1 }">
             Primaria
           </button>
 
-          <button @click="setScopeCategory(2); expanded2 = !expanded2; expanded1 = false" class="button scope-list" v-bind:class="{ 'is-warning': !expanded2, 'is-primary': expanded2 }">
+          <button @click="setScopeCategory('secundaria'); expanded2 = !expanded2; expanded1 = false" class="button scope-list" v-bind:class="{ 'is-warning': !expanded2, 'is-primary': expanded2 }">
             Secundària
           </button>
 
@@ -122,14 +122,28 @@ export default {
       return scopesWithBoxes
     },
     filteredBoxes() {
-      if (this.scope == '' && this.direct == null ) {
+      if (this.scope == '' && this.direct == null && this.level == '') {
         return this.boxes
       }
       else {
         let boxes = this.boxes
         if (this.scope != '') {
           boxes = boxes.filter(b => b.scopes.indexOf(this.scope) >= 0)
-        }        
+        }
+        else if (this.level != '') {
+          let scopes = this.scopes.filter(s => s.level == this.level)          
+          let boxesOfLevels = []
+          scopes.forEach(s => {            
+            let boxesOfLevel = boxes.filter(b => b.scopes.indexOf(s.id) >= 0)
+            boxesOfLevel.forEach(b => {
+              if (!boxesOfLevels.find(bx => bx.id == b.id)) {
+                boxesOfLevels.push(b)
+              }
+            })
+          })
+          boxes = boxesOfLevels
+        }
+
         if (this.direct === true) {
           boxes = boxes.filter(b => b.liveDate != null && b.liveDate != '')
         }
@@ -151,6 +165,7 @@ export default {
     return {
       scopes: scopes,
       scope: '',
+      level: '',
       direct: null,
       expanded1: false,
       expanded2: false,
@@ -165,8 +180,9 @@ export default {
         });
       }
     },
-    setScopeCategory(expanded) {
+    setScopeCategory(level) {
       this.scope = ''
+      this.level = level
       this.direct = null
     },
     bgImage(scope) {            
