@@ -3,30 +3,26 @@
     <div>
       <div class="hero hero0">
         <div class="hero-bg" v-bind:style="{ backgroundImage: 'url(' + require(`@/assets/images/educov.jpg`) }"></div>
-
-        <div class="container has-margin-top-3">
-          <div class="columns">
-            <div class="column is-9">
-              <img alt="EDUCOV" id="educov" src="@/assets/images/educov-logo.png" />
-              <div class="more">
-                <transition name="fade">
-                  <div v-if="seen">
-                    <div class="subtitle">{{ title1 }}</div>
-                    <div class="desc">
-                      {{ title2 }}
+          <div class="container main-container mb0 has-margin-top-3">
+            <div class="columns">
+              <div class="column is-9">
+                <img alt="EDUCOV" id="educov" src="@/assets/images/educov-logo.png" />
+                <div class="more">
+                  <transition name="fade">
+                    <div v-if="seen">
+                      <div class="subtitle">{{ title1 }}</div>
+                      <div class="desc">
+                        {{ title2 }}
+                      </div>                  
                     </div>                  
-                  </div>                  
-                </transition>
-              </div>              
-            </div>
-            <div class="column is-3">
-            </div>
-          </div>                    
+                  </transition>
+                </div>              
+              </div>
+              <div class="column is-3">
+              </div>
+            </div>                    
+          </div>
         </div>
-
-        
-      </div>
-
       </div>
 
       <div class="container main-container">
@@ -154,7 +150,7 @@ export default {
   top:0;
   bottom:0;
   width:100%;
-  height: 650px;
+  height: 580px;
   opacity: 0.4;
   background-position: center;
 }
@@ -166,10 +162,8 @@ export default {
 }  
 
 .hero0{
-  height: 650px;
+  height: 580px;
   position: relative;
-  margin-left: -20px;
-  margin-right: -20px;
 }
 .hero0 .container{
   width: 100%;
@@ -205,7 +199,7 @@ export default {
   font-weight: normal;
 }
 .all-boxes-create{
-  padding-top: 4rem;
+  padding-top: 1rem;
 }
 #educov{
   max-width: 200px;
@@ -226,5 +220,9 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0
+}
+.mb0{
+  margin-bottom: 0!important;
+  overflow: hidden;
 }
 </style>
