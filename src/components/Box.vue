@@ -596,7 +596,7 @@ export default {
 
       this.$swal({
         title: "Començar repte?",
-        text: "Assegura't d'haver consultat els continguts abans de començar el repte. " + msg,
+        text: msg,
         icon: "question",
         confirmButtonText: "Sí",
         showCancelButton: true,

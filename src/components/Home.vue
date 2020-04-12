@@ -191,9 +191,14 @@ export default {
 .more{
   margin-top:70px;
   color:#49ADC1;
-  width: 50%;
-  font-size: 18px;
-  padding-left: 20px;
+  width: 90%;
+  font-size: 18px;  
+}
+@media screen and (min-width: 1024px) {
+  .more{
+    width: 60%;
+    padding-left: 20px;
+  }
 }
 .title b{
   font-weight: normal;
@@ -204,7 +209,7 @@ export default {
 #educov{
   max-width: 200px;
   margin-top: 120px;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 @media screen and (min-width: 1024px) {
   #educov{
@@ -212,7 +217,7 @@ export default {
   }
   .more{
     margin-top:140px;
-    padding-left: 00px;
+    padding-left: 0px;
   }
 }   
 .fade-enter-active, .fade-leave-active {
