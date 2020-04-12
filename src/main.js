@@ -8,7 +8,8 @@ import './assets/scss/app.scss'
 import VueSweetalert2 from 'vue-sweetalert2';
 import "./services/descriptions.filters";
 import linkify from 'vue-linkify'
-
+import VueSimpleMarkdown from 'vue-simple-markdown'
+import 'vue-simple-markdown/dist/vue-simple-markdown.css'
 
 Vue.config.productionTip = false
 
@@ -18,6 +19,7 @@ const options = {
 }
 
 Vue.use(VueSweetalert2, options)
+Vue.use(VueSimpleMarkdown)
 Vue.directive('linkified', linkify)
 
 // handle page reloads

@@ -53,6 +53,7 @@ npm run dev
 ### Tech Roadmap
 - Optimitzar algunes queries
 - Implementar Vue SSR via Nuxt
+- Afegir mòdul PWA
 - Editor markup per als continguts
 
 

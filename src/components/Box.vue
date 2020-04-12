@@ -164,8 +164,9 @@
             <h4 class="subtitle">
                 Descripció            
             </h4>
-            <p class="desc preserve-lines"  v-html="box.description" v-linkified></p>
-
+            <!-- <p class="desc preserve-lines"  v-html="box.description" v-linkified></p> -->
+            <vue-simple-markdown class="desc" :source="box.description"></vue-simple-markdown>
+            
             <h4 v-if="box.targets && box.targets != ''" class="subtitle">Objectius</h4>
             <p
               v-if="box.targets && box.targets != ''"
@@ -355,7 +356,7 @@ export default {
   components: {
     BoxActivities,
     BoxContent,
-    BoxReviews
+    BoxReviews,
   },
   computed: {
     liveLinkFixed() {
@@ -660,6 +661,12 @@ p.desc, li.desc {
   color: #a3a3a3;  
   line-height: 30px;
 }
+.vue-simple-markdown{
+  font-size: 16px;
+  font-family: "Varela Round";
+  color: #a3a3a3;  
+  line-height: 30px;
+}
 li.desc{
   line-height: 20px;
 }
@@ -804,6 +811,5 @@ line-height: 30px;
   .row-reverse-mobile{
     flex-direction: row-reverse;
   }
-}   
-
+}
 </style>

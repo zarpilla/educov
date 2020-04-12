@@ -9,9 +9,8 @@
         <h5 class="title zis-spaced preserve-lines">
             <div class="tag is-warning">{{ milestoneIndex + 1 }}/{{ results.length }}</div> {{ results[milestoneIndex].name }}
         </h5>
-        <div class="more desc" v-if="results[milestoneIndex].instructions != ''">          
-          <!-- {{ results[milestoneIndex].instructions }} -->
-          <div class="preserve-lines" v-html="results[milestoneIndex].instructions" v-linkified />
+        <div class="more desc" v-if="results[milestoneIndex].instructions != ''">
+          <vue-simple-markdown class="desc" :source="results[milestoneIndex].instructions"></vue-simple-markdown>
         </div>
         <div class="columns" v-if="results[milestoneIndex].type == 'answer'">
           <div class="column">
@@ -435,5 +434,7 @@ form textarea{
 .do-public .label{
   color:#727475;
 }
-
+.markdown-body::before{
+  display: none;
+}
 </style>

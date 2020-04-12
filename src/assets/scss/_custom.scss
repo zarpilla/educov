@@ -215,6 +215,12 @@ border-bottom: 2px solid #f1f1f1;
 .preserve-lines{
     white-space: pre-line;
 }
+.markdown-body::before{
+    display: none!important;
+}
+.vue-simple-markdown{
+    margin-bottom: 3rem!important;
+}  
 // @media screen and (max-width: $desktop) {
 //     .button-logout{
 //         max-width: 80px;
