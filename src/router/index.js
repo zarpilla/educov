@@ -31,7 +31,7 @@ const router = new Router({
 			name: 'Home',
 			component: Home,
 			meta: {
-				title: 'EDUCOV - Col·lecció pública, gratuita i oberta de continguts educatius',
+				title: 'EDUCOV - Reptes i recursos educatius públics, gratuits i oberts',
 			}
 		},
 		{
