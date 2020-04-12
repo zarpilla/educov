@@ -6,7 +6,7 @@ EDUCOV és una col·lecció pública, gratuïta i oberta de continguts educatius
 S'organitza a través de reptes que contenen els materials educatius i les referències necessaries per a aprendre online i que pots resoldre quan vulguis de manera autònoma. Aquests reptes poden tenir o no activitats d'avaluació i tu decideixes fer públics o no els teus resultats. 
 Alguns reptes tenen emissions en directe a hores concretes per part de qui els planteja permetent aprofundir en temes amb l'ajuda d'un expert o de la comunitat.
 
-![educov](https://demo.webcoop.cat/educov/educov.png)
+![educov](https://demo.webcoop.cat/educov/educov2.png)
 
 
 ## Atribucions
