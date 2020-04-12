@@ -4,7 +4,7 @@
         
 <h2 class="title">Què és EDUCOV?</h2>
 
-EDUCOV neix durant la crisi del Coronavirus de les necessitats detectades per part de mestres, professorat i famílies d’una eina o plataforma que els permetés fer reculls de recursos educatius i activitats que motivin a l’autoaprenentatge des de casa. EDUCOV és un projecte desenvolupat per l'equip 070-webcoopz (<a target="_blank" href="https://webcoop.cat">webcoop</a>) durant la <a target="_blank" href="https://hackovid.cat/">hackató hackovid</a> per aportar solucions a les necessitats de la ciutadania durant el confinament.
+EDUCOV neix durant la crisi del Coronavirus de les necessitats detectades per part de mestres, professorat i famílies d’una eina o plataforma que els facilités les videoconferències i els permetés fer reculls de recursos educatius i activitats que motivin a l’autoaprenentatge des de casa. EDUCOV és un projecte desenvolupat per l'equip 070-webcoopz (<a target="_blank" href="https://webcoop.cat">webcoop</a>) durant la <a target="_blank" href="https://hackovid.cat/">hackató hackovid</a> per aportar solucions a les necessitats de la ciutadania durant el confinament.
 
 Aquesta plataforma intenta respondre a aquestes necessitats. És tracta d’una plataforma digital en obert amb diferents continguts eductius i reptes per ajudar a interioritzar el contingut o a validar-ne l’aprenentatge.
 
@@ -31,7 +31,8 @@ Els continguts es poden presentar en diferents formats: documents escrits o docu
 
 Respecte a les activitats o reptes, cada contingut pot anar acompanyat d’activitats o reptes que ajudin a interioritzar-lo. Aquestes són opcionals i la plataforma permet inserir-los en format test (pregunta i resposta concreta) o en format de pregunta i resposta oberta.
 
-Algunes activitats poden tenir informació (data, hora i enllaç) de videoconferències per a fer trobades en directe.
+Alguns reptes poden tenir emissions en directe a hores concretes per part de qui els planteja permetent aprofundir en temes amb l'ajuda d'un expert o de la comunitat.
+
 
 
 <h4 class="subtitle">Com es valoren els continguts i els reptes?</h4>
