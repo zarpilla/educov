@@ -11,11 +11,6 @@ Alguns reptes tenen emissions en directe a hores concretes per part de qui els p
 ## Frontend
 Aplicació web feta amb [Vue](https://vuejs.org/)
 
-## Backend
-Serverless.
-Per a la identificació d'usuaris i l'enmagatzematge de dades i fitxers, utilitza els serveis de [Firebase](https://firebase.google.com/firebase-and-gcp)
-
-
 ### Get Started
 
 ``` bash
@@ -40,7 +35,12 @@ npm install
 npm run dev
 ```
 
-### Tech Roadmap
+## Backend
+Serverless.
+Per a la identificació d'usuaris i l'enmagatzematge de dades i fitxers, utilitza els serveis de [Firebase](https://firebase.google.com/firebase-and-gcp)
+
+
+## Tech Roadmap
 - Optimitzar algunes queries
 - Implementar Vue SSR via Nuxt
 - Afegir mòdul PWA
@@ -58,7 +58,7 @@ Aquest projecte és de codi obert i ha estat desenvolupat gràcies a altres proj
 Les imatges que conté aquest repositori tenen [llicència d'ús lliure freepik](https://www.freepik.com/)
 
 
-### License
+## License
 
 ```
 Copyright (C) 2020 webcoop
