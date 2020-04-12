@@ -8,19 +8,6 @@ Alguns reptes tenen emissions en directe a hores concretes per part de qui els p
 
 ![educov](https://demo.webcoop.cat/educov/educov3.png)
 
-
-## Atribucions
-Aquest projecte és de codi obert i ha estat desenvolupat gràcies a altres projectes de codi obert:
-
-- [npm](https://www.npmjs.com/)
-- [nodejs](https://nodejs.org/)
-- [Vue](https://vuejs.org/)
-- [Bulma.io](https://bulma.io/)
-- [Material icons](https://material.io/resources/icons/?style=baseline)
-
-Les imatges que conté aquest repositori tenen [llicència d'ús lliure freepik](https://www.freepik.com/)
-
-
 ## Frontend
 Aplicació web feta amb [Vue](https://vuejs.org/)
 
@@ -57,6 +44,18 @@ npm run dev
 - Optimitzar algunes queries
 - Implementar Vue SSR via Nuxt
 - Afegir mòdul PWA
+
+
+## Atribucions
+Aquest projecte és de codi obert i ha estat desenvolupat gràcies a altres projectes de codi obert:
+
+- [npm](https://www.npmjs.com/)
+- [nodejs](https://nodejs.org/)
+- [Vue](https://vuejs.org/)
+- [Bulma.io](https://bulma.io/)
+- [Material icons](https://material.io/resources/icons/?style=baseline)
+
+Les imatges que conté aquest repositori tenen [llicència d'ús lliure freepik](https://www.freepik.com/)
 
 
 ### License
