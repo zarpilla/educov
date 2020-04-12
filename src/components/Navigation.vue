@@ -36,7 +36,7 @@
       <div class="container">
         <div class="navbar-brand">
           <router-link class="navbar-item logo" to="/">
-            <img src="@/assets/images/educov-logo.png" />
+            <img alt="EDUCOV" src="@/assets/images/educov-logo.png" />
           </router-link>
           
 

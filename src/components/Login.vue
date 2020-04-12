@@ -10,7 +10,10 @@
         <div class="column hero is-primary is-fullheight is-hidden-mobile">
           <div class="hero-body">
             <div class="container is-centered">
-              <p class="title">EDUCOV</p>
+              <!-- <p class="title">
+                EDUCOV
+              </p> -->
+              <img alt="EDUCOV" class="educov-login" src="@/assets/images/educov-white-logo.png" />
               <p class="subtitle">Benvingut/da</p>
             </div>
           </div>
@@ -296,5 +299,9 @@ export default {
 .checkbox input{
   width: 30px;
   margin-top: 1rem;
+}
+.educov-login{
+  max-height: 40px;
+  margin-bottom: 2rem;
 }
 </style>

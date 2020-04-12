@@ -7,7 +7,7 @@
         <div class="container has-margin-top-3">
           <div class="columns">
             <div class="column is-9">
-              <img id="educov" src="@/assets/images/educov-logo.png" />
+              <img alt="EDUCOV" id="educov" src="@/assets/images/educov-logo.png" />
               <div class="more">
                 <!-- <div class="subtitle" id="educov-title">Autoaprenentatge</div>
                 <p class="desc" id="educov-subtitle">
