@@ -9,10 +9,6 @@
             <div class="column is-9">
               <img alt="EDUCOV" id="educov" src="@/assets/images/educov-logo.png" />
               <div class="more">
-                <!-- <div class="subtitle" id="educov-title">Autoaprenentatge</div>
-                <p class="desc" id="educov-subtitle">
-                  {{ text2[0] }}
-                </p> -->
                 <transition name="fade">
                   <div v-if="seen">
                     <div class="subtitle">{{ title1 }}</div>
@@ -203,6 +199,7 @@ export default {
   color:#49ADC1;
   width: 50%;
   font-size: 18px;
+  padding-left: 20px;
 }
 .title b{
   font-weight: normal;
@@ -213,10 +210,15 @@ export default {
 #educov{
   max-width: 200px;
   margin-top: 120px;
+  padding-left: 20px;
 }
 @media screen and (min-width: 1024px) {
+  #educov{
+    padding-left: 0px;
+  }
   .more{
     margin-top:140px;
+    padding-left: 00px;
   }
 }   
 .fade-enter-active, .fade-leave-active {
