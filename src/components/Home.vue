@@ -9,10 +9,18 @@
             <div class="column is-9">
               <img id="educov" src="@/assets/images/educov-logo.png" />
               <div class="more">
-                <div class="subtitle" id="educov-title">Autoaprenentatge</div>
+                <!-- <div class="subtitle" id="educov-title">Autoaprenentatge</div>
                 <p class="desc" id="educov-subtitle">
                   {{ text2[0] }}
-                </p>
+                </p> -->
+                <transition name="fade">
+                  <div v-if="seen">
+                    <div class="subtitle">{{ title1 }}</div>
+                    <div class="desc">
+                      {{ title2 }}
+                    </div>                  
+                  </div>                  
+                </transition>
               </div>              
             </div>
             <div class="column is-3">
@@ -65,7 +73,10 @@ export default {
       text2: ["Els recursos permeten un aprenentatge de forma autònoma", "Tothom hi té accés. És una eina lliure i gratuïta", "Permet la creació de nous continguts i reptes adaptats a les necessitats de cada moment.", "Es poden crear reptes en directe per treballar conjuntament a través de videoconferències"],
       counter: 0,
       interval: 0,
-      polling: null
+      polling: null,
+      title1: "Autoaprenentatge",
+      title2: "Els recursos permeten un aprenentatge de forma autònoma",
+      seen: true
     }
   },
   beforeDestroy () {
@@ -80,19 +91,16 @@ export default {
       this.counter = 1
       this.polling = setInterval(() => {
         this.change()
-      }, 4000)
+      }, 5000)
     },
-    change() {
-      let elem1 = document.getElementById('educov-title')
-      let elem2 = document.getElementById('educov-subtitle')
-      if (elem1) {
-        elem1.innerHTML = this.text1[this.counter]
-      }
-      if (elem2) {
-        elem2.innerHTML = this.text2[this.counter]
-      }
-        //elem.html(text[counter]);
+    change() {      
+      this.title1 = this.text1[this.counter]
+      this.title2 = this.text2[this.counter]
       this.counter++;
+      this.seen = !this.seen;
+      setTimeout(() => {
+        this.seen = !this.seen;
+      }, 500)
       if(this.counter >= this.text1.length) { this.counter = 0; }
     }
   }
@@ -211,4 +219,10 @@ export default {
     margin-top:140px;
   }
 }   
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
 </style>
