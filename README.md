@@ -54,7 +54,6 @@ npm run dev
 - Optimitzar algunes queries
 - Implementar Vue SSR via Nuxt
 - Afegir mòdul PWA
-- Editor markup per als continguts
 
 
 ### License

@@ -69,13 +69,13 @@ export default {
   },
   data() {
     return{
-      text1: ["Autoaprenentatge", "Obert", "Dinàmic", "En directe"],
-      text2: ["Els recursos permeten un aprenentatge de forma autònoma", "Tothom hi té accés. És una eina lliure i gratuïta", "Permet la creació de nous continguts i reptes adaptats a les necessitats de cada moment.", "Es poden crear reptes en directe per treballar conjuntament a través de videoconferències"],
+      text1: ["En directe", "Autoaprenentatge", "Obert", "Dinàmic"],
+      text2: ["Per aprendre conjuntament online a través de videoconferències", "Els recursos permeten un aprenentatge de forma autònoma, al teu ritme", "Tothom hi té accés. És una eina lliure i gratuïta", "Permet la creació de nous continguts i reptes adaptats a les necessitats de cada moment."],
       counter: 0,
       interval: 0,
       polling: null,
-      title1: "Autoaprenentatge",
-      title2: "Els recursos permeten un aprenentatge de forma autònoma",
+      title1: "En directe",
+      title2: "Per aprendre conjuntament online a través de videoconferències",
       seen: true
     }
   },
