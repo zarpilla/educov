@@ -13,7 +13,7 @@
     "bulma": "^0.8.0",
     "firebase": "^7.10.0",
     "fsevents": "^1.2.9",
-    "moment": "^2.22.1",
+    "moment": "^2.29.4",
     "vue": "^2.5.2",
     "vue-cookie-law": "^1.13.3",
     "vue-linkify": "^1.0.1",
